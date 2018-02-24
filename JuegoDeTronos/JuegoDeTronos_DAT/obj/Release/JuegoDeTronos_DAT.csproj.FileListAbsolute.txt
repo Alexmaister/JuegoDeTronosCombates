@@ -1,0 +1,17 @@
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\bin\Release\JuegoDeTronos_DAT.dll
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\bin\Release\JuegoDeTronos_DAT.pdb
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\bin\Release\JuegoDeTronos_DAT.pri
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\Release\JuegoDeTronos_DAT.csproj.CoreCompileInputs.cache
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\Release\JuegoDeTronos_DAT.dll
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\Release\JuegoDeTronos_DAT.pdb
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\Release\priconfig.xml
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\Release\priconfig.xml.intermediate
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\Release\layout.resfiles
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\Release\layout.resfiles.intermediate
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\Release\resources.resfiles
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\Release\resources.resfiles.intermediate
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\Release\pri.resfiles
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\Release\pri.resfiles.intermediate
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\Release\qualifiers.txt
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\Release\qualifiers.txt.intermediate
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\Release\MultipleQualifiersPerDimensionFound.txt

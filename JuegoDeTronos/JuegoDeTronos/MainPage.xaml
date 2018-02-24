@@ -1,0 +1,127 @@
+﻿<Page
+    x:Class="JuegoDeTronos.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="using:JuegoDeTronos.viewmodel"
+    xmlns:local="using:JuegoDeTronos"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:clsViewModelCombates/>
+    </Page.DataContext>
+    <Page.Resources>
+        <vm:DateFormatConverter x:Name="convertidorfechastring"/>
+    </Page.Resources>
+    <RelativePanel>
+
+
+
+        <ListView Name="Combates" MinWidth="300" MaxWidth="400" MinHeight="500" ItemsSource="{Binding combates,Mode=TwoWay}" SelectedItem="{Binding  combate_seleccionado,Mode=TwoWay}" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Margin="16,8,-16,-8">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Name="FechaCombate" Text="{Binding fecha_combate ,Converter={StaticResource convertidorfechastring}}"></TextBlock>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+
+        <ListView Name="contrincantes1" ItemsSource="{Binding luchadores_contrincante1,Mode=TwoWay}" SelectedItem="{Binding contrincante1,Mode=TwoWay}" RelativePanel.RightOf="Combates" MinHeight="400" MinWidth="300" MaxWidth="400" MaxHeight="550">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Name="FechaCombate" Text="{Binding nombre}"></TextBlock>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <Button Name="combatir" Content="COMBATIR"  RelativePanel.LeftOf="contrincantes2" RelativePanel.RightOf="contrincantes1" Margin="100,300,50,0" MinWidth="200" Command="{Binding combatir}"></Button>
+
+        <ListView Name="contrincantes2" ItemsSource="{Binding luchadores_contrincante2,Mode=TwoWay}" SelectedItem="{Binding contrincante2,Mode=TwoWay}" RelativePanel.AlignRightWithPanel="True" MinHeight="400" MinWidth="300" MaxWidth="400" MaxHeight="550">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Name="FechaCombate" Text="{Binding nombre}"></TextBlock>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Grid Name=" contrincante1" RelativePanel.RightOf="Combates" RelativePanel.Below="contrincantes1" MinWidth="300" MaxWidth="400" MinHeight="500">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+
+            <Image Name=" foto1"  MinHeight="50" MinWidth="50" MaxHeight="300" MaxWidth="300">
+                <Image.Source>
+                    <BitmapImage UriSource="{Binding fotol1,Mode=TwoWay}" />
+                </Image.Source>
+            </Image>
+            <Image Name="fotol1" MinHeight="50" MinWidth="50" MaxHeight="300" MaxWidth="300" Source="///Assets//Images//Luchadores//1.jpg"></Image>
+            <Image Grid.Column="1" Name="fotoc1" MinHeight="50" MinWidth="50" MaxHeight="300" MaxWidth="300" Source="{Binding fotoc1,Mode=TwoWay}"></Image>
+
+
+
+        </Grid>
+
+        <Grid Name="contrincante2" RelativePanel.AlignRightWithPanel="true" RelativePanel.Below="contrincantes1" MinWidth="300" MaxWidth="400" MinHeight="500">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+
+
+            <Image Name="fotol2" MinHeight="50" MinWidth="50" MaxHeight="300" MaxWidth="300" Source="{Binding fotol2,Mode=TwoWay}"></Image>
+            <Image  Grid.Column="1" Name="fotoc2" MinHeight="50" MinWidth="50" MaxHeight="300" MaxWidth="300" Source="{Binding fotoc2,Mode=TwoWay}"></Image>
+
+        </Grid>
+
+        <Button Name="guardar" Content="GUARDAR COMBATE" Command="{Binding guardar_combate}"  RelativePanel.AlignBottomWithPanel="True" RelativePanel.Below="combatir" RelativePanel.RightOf=" contrincante1" Margin="100,400,0,0" MinWidth="200"></Button>
+        <StackPanel Name="SANGRIENTO" Orientation="Horizontal" RelativePanel.RightOf=" contrincante1" RelativePanel.Below="contrincantes1" MinWidth="300" MinHeight="50">
+
+            <TextBlock Text="sangriento :"/>
+            <RadioButton Tag="1" IsChecked="{Binding sangriento1 ,Mode=TwoWay}"></RadioButton>
+            <RadioButton Tag="2" IsChecked="{Binding sangriento2 ,Mode=TwoWay}" ></RadioButton>
+        </StackPanel>
+
+        <StackPanel Name="espectacular" Orientation="Horizontal" RelativePanel.RightOf=" contrincante1" RelativePanel.Below="SANGRIENTO" MinWidth="300" MinHeight="50">
+
+            <TextBlock Text="espectacular :"/>
+            <RadioButton Tag="1" IsChecked="{Binding espectacular1 ,Mode=TwoWay}"></RadioButton>
+            <RadioButton Tag="2" IsChecked="{Binding espectacular2 ,Mode=TwoWay}"></RadioButton>
+        </StackPanel>
+        <StackPanel Name="victorioso"  Orientation="Horizontal" RelativePanel.RightOf=" contrincante1" RelativePanel.Below="espectacular" MinWidth="300" MinHeight="50">
+
+            <TextBlock Text="victorioso :"/>
+            <RadioButton Tag="1" IsChecked="{Binding victorioso1 ,Mode=TwoWay}"></RadioButton>
+            <RadioButton Tag="2" IsChecked="{Binding victorioso2 ,Mode=TwoWay}"></RadioButton>
+        </StackPanel>
+    </RelativePanel>
+
+</Page>

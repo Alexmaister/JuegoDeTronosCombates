@@ -1,0 +1,2 @@
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\x86\Debug\JuegoDeTronos_DAT.csprojResolveAssemblyReference.cache
+C:\Users\Maister\Desktop\JuegoDeTronos\JuegoDeTronos_DAT\obj\x86\Debug\JuegoDeTronos_DAT.csproj.CoreCompileInputs.cache
